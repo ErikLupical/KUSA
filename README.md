@@ -73,3 +73,6 @@ Frontend → http://your-frontend-domain.com
 # Members
 - Taam Paramee
 - Oak Soe Htet
+- Chaiyapat Kumtho
+- Amornrit Sirikham
+- Pasin Tongtip
