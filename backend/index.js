@@ -13,6 +13,7 @@ const nodemailer = require('nodemailer');
 const multer = require("multer");
 const uploadFile = require("./utils/uploadFile");
 const populateFileBase64 = require("./utils/populateFileBase64");
+const adminRoutes = require("./adminroutes");
 const path = require("path");
 
 const upload = multer({ storage: multer.memoryStorage() });
@@ -130,6 +131,9 @@ const DAY_ENUM = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
 function overlaps(aStart, aEnd, bStart, bEnd) {
     return Math.max(aStart, bStart) < Math.min(aEnd, bEnd);
 }
+// =================== ADMIN DASHBOARD =====================
+
+app.use("/api/v1/admin", adminRoutes);
 
 // ==================== AUTH  =====================
 

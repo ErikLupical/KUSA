@@ -37,6 +37,10 @@ export function AccountSettingsDialog() {
     router.push('/profile');
   };
 
+  const handleOpenAdmin = () => {
+    router.push('/admin');
+  };
+
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
@@ -55,6 +59,12 @@ export function AccountSettingsDialog() {
             onClick={handleMyProfileClick}
           >
             My Profile
+          </button>
+          <button
+            className="w-full text-left px-3 py-2 rounded hover:bg-gray-100 cursor-pointer"
+            onClick={handleOpenAdmin}
+          >
+            Admin
           </button>
           {/* <button className="w-full text-left px-3 py-2 rounded hover:bg-gray-100 cursor-pointer" onClick={handleChangePasswordClick}>Change password</button> */}
           <PasswordChangingDialog
